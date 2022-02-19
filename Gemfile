@@ -27,6 +27,7 @@ group :test do
   gem 'faker', '~> 2.19'
   gem 'simplecov', '~> 0.21.2'
   gem 'simplecov-console', require: false
+  gem 'rails-controller-testing'
 end
 
 group :development, :test do
