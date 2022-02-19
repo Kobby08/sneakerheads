@@ -17,6 +17,8 @@ group :development do
   gem 'guard', '~> 2.18'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  gem 'pry-rails', '~> 0.3.9'
+  gem 'awesome_print', '~> 1.9', '>= 1.9.2'
 end
 
 group :test do
