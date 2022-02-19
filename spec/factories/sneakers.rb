@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :sneaker do
-    name { 'MyString' }
-    model { 'MyString' }
+    name { 'Air Jordan' }
+    model { 'Ninja Edition' }
     description { 'MyText' }
     price { '9.99' }
     image { 'MyText' }
