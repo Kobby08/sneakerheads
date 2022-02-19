@@ -1,12 +1,9 @@
+ENV['RAILS_ENV'] ||= 'test'
+
+require_relative '../config/environment'
 require 'spec_helper'
 require 'rspec/rails'
-require_relative '../config/environment'
-Dir[Rails.root.join('spec/support/**/*.rb')].sort.each { |file| require file }
-
-ENV['RAILS_ENV'] ||= 'test'
-if Rails.env.production?
-  abort('The Rails environment is running in production mode!')
-end
+Dir[Rails.root.join('spec/support/**/*.rb')].sort.each { |f| require f }
 
 begin
   ActiveRecord::Migration.maintain_test_schema!

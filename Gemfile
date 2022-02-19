@@ -23,10 +23,10 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 5.1'
-  gem 'shoulda-callback-matchers', '~> 1.1', '>= 1.1.4'
   gem 'database_cleaner'
   gem 'faker', '~> 2.19'
   gem 'simplecov', '~> 0.21.2'
+  gem 'simplecov-console', require: false
 end
 
 group :development, :test do
