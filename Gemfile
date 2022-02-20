@@ -20,6 +20,7 @@ group :development do
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'pry-rails', '~> 0.3.9'
   gem 'awesome_print', '~> 1.9', '>= 1.9.2'
+  gem 'byebug', '~> 11.1', '>= 11.1.3'
 end
 
 group :test do

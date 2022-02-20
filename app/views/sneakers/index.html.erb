@@ -1,4 +1,5 @@
 <h1>All Sneakers</h1>
+<%= link_to "Create Sneaker", new_sneaker_path %>
 <% @sneakers.each do |sneaker| %>
   <p><%= sneaker.name %></p>
   <p><%= sneaker.model %></p>

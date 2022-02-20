@@ -2,3 +2,5 @@
 <p><%= @sneaker.model %></p>
 <p><%= @sneaker.price %></p>
 <%= link_to "All Sneakers", sneakers_path %>
+<%= link_to "Edit Sneaker", edit_sneaker_path(@sneaker) %>
+<%= button_to "Destroy", sneaker_path(@sneaker), method: :delete, data: { confirm: "Are you sure?"} %>

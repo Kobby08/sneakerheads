@@ -5,5 +5,10 @@ class Sneaker < ApplicationRecord
   # validations
   validates_presence_of :name
   validates_presence_of :model
-  validates_length_of :description, within: 10..250, allow_nil: true
+  validates_length_of(
+    :description,
+    within: 10..250,
+    allow_nil: true,
+    allow_blank: true,
+  )
 end
