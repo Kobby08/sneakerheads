@@ -6,6 +6,9 @@ class Sneaker < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  # associations
+  belongs_to :user
+
   # validations
   validates_presence_of :name
   validates_presence_of :model

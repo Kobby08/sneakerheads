@@ -6,5 +6,15 @@ sneakers = [
   { name: 'Adidas EQT', model: 'Retro Red', price: 250 },
 ]
 
-sneakers.each { |sneaker| Sneaker.create!(sneaker) }
+user =
+  User.create!(
+    first_name: 'John',
+    last_name: 'Doe',
+    username: 'jdoe',
+    email: 'testuser@test.com',
+    password: 'tr#sted',
+    password_confirmation: 'tr#sted',
+  )
+
+sneakers.each { |sneaker| Sneaker.create!(sneaker.merge(user_id: user.id)) }
 puts 'Sneakers created.........'

@@ -32,9 +32,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_20_190718) do
     t.decimal "price", precision: 10, scale: 2, default: "0.0"
     t.text "image"
     t.string "slug"
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["slug"], name: "index_sneakers_on_slug", unique: true
+    t.index ["user_id"], name: "index_sneakers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
