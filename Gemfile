@@ -11,6 +11,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
+gem 'simple_form', '~> 5.1'
 
 group :development do
   gem "web-console"
