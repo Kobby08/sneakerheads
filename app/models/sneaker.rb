@@ -2,6 +2,10 @@ class Sneaker < ApplicationRecord
   # Attributes:
   # name, model, brand, condition, description, image, price
 
+  # friendly_id
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
   # validations
   validates_presence_of :name
   validates_presence_of :model

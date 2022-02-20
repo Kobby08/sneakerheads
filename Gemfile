@@ -13,6 +13,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 gem 'simple_form', '~> 5.1'
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
+gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 
 group :development do
   gem "web-console"

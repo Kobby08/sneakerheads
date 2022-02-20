@@ -38,7 +38,7 @@ class SneakersController < ApplicationController
   private
 
   def set_sneaker
-    @sneaker = Sneaker.find(params[:id])
+    @sneaker = Sneaker.friendly.find(params[:id])
   end
 
   def sneaker_params

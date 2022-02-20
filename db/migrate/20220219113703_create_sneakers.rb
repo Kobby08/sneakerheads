@@ -6,6 +6,7 @@ class CreateSneakers < ActiveRecord::Migration[7.0]
       t.text :description
       t.decimal :price, default: 0.00, precision: 10, scale: 2
       t.text :image
+      t.string :slug, index: { unique: true }
 
       t.timestamps
     end
