@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  def store; end
+  def store
+    @sneakers = Sneaker.all
+  end
 end

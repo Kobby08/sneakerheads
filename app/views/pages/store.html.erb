@@ -1,1 +1,11 @@
 <h1>Welcome to SneakerHeads</h1>
+<h2>Checkout Latest Sneakers</h2>
+<%= link_to "My Store", sneakers_path %>
+<%= link_to "Create Sneaker", new_sneaker_path %>
+<% @sneakers.each do |sneaker| %>
+  <p><%= sneaker.name %></p>
+  <p><%= sneaker.model %></p>
+  <p><%= sneaker.price %></p>
+  <%= link_to "Show Sneaker", sneaker_path(sneaker) %>
+  <hr>
+<% end %>

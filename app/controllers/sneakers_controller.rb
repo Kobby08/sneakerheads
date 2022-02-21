@@ -1,8 +1,9 @@
 class SneakersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_sneaker, except: %i[index new create]
 
   def index
-    @sneakers = Sneaker.all
+    @sneakers = current_user.sneakers
   end
 
   def show; end
