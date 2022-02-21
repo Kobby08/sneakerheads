@@ -6,6 +6,7 @@
   <p><%= sneaker.name %></p>
   <p><%= sneaker.model %></p>
   <p><%= sneaker.price %></p>
+  <%= image_tag sneaker.image if sneaker.image.present? %>
   <%= link_to "Show Sneaker", sneaker_path(sneaker) %>
   <hr>
 <% end %>

@@ -16,5 +16,9 @@ user =
     password_confirmation: 'tr#sted',
   )
 
-sneakers.each { |sneaker| Sneaker.create!(sneaker.merge(user_id: user.id)) }
+sneakers.each do |sneaker|
+  Sneaker.create!(
+    sneaker.merge(user_id: user.id, image: 'https://place-hold.it/300x300'),
+  )
+end
 puts 'Sneakers created.........'
