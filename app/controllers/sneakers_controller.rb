@@ -12,10 +12,12 @@ class SneakersController < ApplicationController
   end
 
   def create
-    @sneaker = Sneaker.new(sneaker_params)
+    @sneaker = Sneaker.new(sneaker_params.merge(user: current_user))
     if @sneaker.save
-      redirect_to sneakers_path, notice: 'Sneaker created!'
+      flash[:notice] = 'Sneaker was created successfully!'
+      redirect_to sneakers_path
     else
+      flash.now[:alert] = 'Sneaker was not created!'
       render 'new'
     end
   end
@@ -24,14 +26,17 @@ class SneakersController < ApplicationController
 
   def update
     if @sneaker.update(sneaker_params)
-      redirect_to sneaker_path(@sneaker), notice: 'Sneaker updated!'
+      flash[:notice] = 'Sneaker was upated successfully!'
+      redirect_to sneaker_path(@sneaker)
     else
+      flash.now[:alert] = 'Sneaker was not updated!'
       render 'edit'
     end
   end
 
   def destroy
     @sneaker.destroy
+    flash[:alert] = 'Sneaker was deleted!'
     redirect_to sneakers_path
   end
 
