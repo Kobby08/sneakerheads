@@ -15,7 +15,8 @@ gem 'simple_form', '~> 5.1'
 gem 'devise', github: 'heartcombo/devise', branch: 'main'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'bootstrap', '~> 5.1.3'
-gem 'jquery-rails'
+gem "font-awesome-rails"
+
 
 group :development do
   gem "web-console"
