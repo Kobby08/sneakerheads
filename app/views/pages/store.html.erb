@@ -1,12 +1,55 @@
-<h1>Welcome to SneakerHeads</h1>
-<h2>Checkout Latest Sneakers</h2>
-<%= link_to "My Store", sneakers_path %>
-<%= link_to "Create Sneaker", new_sneaker_path %>
-<% @sneakers.each do |sneaker| %>
-  <p><%= sneaker.name %></p>
-  <p><%= sneaker.model %></p>
-  <p><%= sneaker.price %></p>
-  <%= image_tag sneaker.image if sneaker.image.present? %>
-  <%= link_to "Show Sneaker", sneaker_path(sneaker) %>
-  <hr>
-<% end %>
+<!-------------------Start of Call To Action --------------------------------------->
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Change Your Style With <b>SneakerHeads</b></h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <p>
+        <a href="#" class="btn btn-lg btn-primary my-2">Purchase Sneakers</a>
+        <a href="#" class="btn btn-lg btn-secondary my-2">Sell Your Sneakers</a>
+      </p>
+    </div>
+  </div>
+</section>
+<!-------------------End of Call To Action --------------------------------------->
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <% @sneakers.each do |sneaker| %>
+        <div class="col">
+          <div class="card shadow-sm">
+            <%# <%= image_tag sneaker.image if sneaker.image.present? %>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">
+                <%= sneaker.name %> <br>
+                <span class="card-subtitle text-muted"><%= sneaker.model %></span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <%= link_to "View", sneaker_path(sneaker), class: "btn btn-sm btn-outline-primary" %>
+                  <%= link_to "Edit", edit_sneaker_path(sneaker), class: "btn btn-sm btn-outline-success" %>
+                </div>
+                <h5 class="sneaker-price">GHS <%= sneaker.price %></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</main>
+<!-------------------Start of Footer --------------------------------------->
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+<!-------------------End of Footer--------------------------------------->
+</body>
+</html>

@@ -9,10 +9,10 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
+    <%= render 'shared/navbar' %>
     <% flash.each do |type, msg| %>
       <%= msg %>
     <% end %>
-    <%= render 'layouts/shared/navbar' %>
     <%= yield %>
   </body>
 </html>

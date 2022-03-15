@@ -1,3 +1,27 @@
 // See https://jasonfleetwoodboldt.com/courses/stepping-up-rails/rails-7-bootstrap/
 @import "bootstrap";
 @import "font-awesome";
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.form-body {
+    margin-top: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-body .form-control {
+    @extend .form-control;
+    margin-bottom: 20px;
+}
